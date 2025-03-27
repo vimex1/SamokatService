@@ -58,4 +58,3 @@ async def delete_all_scooters(db: db_dependency):
         "code": 200,
         "message": "Записи в таблице 'scooter' удалены"
         }
-
