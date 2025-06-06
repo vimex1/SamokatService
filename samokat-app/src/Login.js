@@ -55,30 +55,38 @@ function Login() {
 
   return (
     <div className={styles.container}>
-        <form onSubmit={handleSubmit}>
-            <div className={styles.formGroup}>
-            <label className={styles.label}>Username:</label>
-            <input
-                className={styles.input}
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-            />
-            </div>
-            <div className={styles.formGroup}>
-            <label className={styles.label}>Password:</label>
-            <input
-                className={styles.input}
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
-            </div>
-            <button className={styles.button} type="submit" disabled={loading}>
-            {loading ? 'Logging in...' : 'Login'}
-            </button>
-            {error && <p className={styles.error}>{error}</p>}
-        </form>
+      {/* Логотип */}
+      <img
+        src="/logo.png"
+        alt="Логотип"
+        className={styles.logo}
+      />
+      {/* Заголовок */}
+      <h1 className={styles.title}>Авторизация</h1>
+      <form onSubmit={handleSubmit}>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Username:</label>
+          <input
+            className={styles.input}
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className={styles.formGroup}>
+          <label className={styles.label}>Password:</label>
+          <input
+            className={styles.input}
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <button className={styles.button} type="submit" disabled={loading}>
+          {loading ? 'Logging in...' : 'Login'}
+        </button>
+        {error && <p className={styles.error}>{error}</p>}
+      </form>
     </div>
   );
 }
