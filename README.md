@@ -1,4 +1,4 @@
-```markdown
+
 # SamokatService
 
 SamokatService — это приложение для управления арендой самокатов. Оно включает серверную часть (backend) на FastAPI и клиентскую часть (frontend) на React.
@@ -134,4 +134,3 @@ cd SamokatService
 
 ## Лицензия
 Этот проект распространяется под лицензией MIT.
-```
